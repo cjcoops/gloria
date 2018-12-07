@@ -1,15 +1,27 @@
 import React from 'react'
-import Background from '../components/background'
+import BgImage from '../components/bg-image'
+import Layout from '../components/layout'
+import Enter from '../components/enter'
 
 const IndexPage = props => (
-  <Background>{props.data.imageOne.childImageSharp.fluid}</Background>
+  <Layout>
+    <BgImage fluid={props.data.landingImage.childImageSharp.fluid} />
+    <Enter />
+  </Layout>
 )
 
 export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    imageOne: file(relativePath: { eq: "000000010028.jpg" }) {
+    landingImage: file(relativePath: { eq: "000000010028.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    mainPageImage: file(relativePath: { eq: "000000010027.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid

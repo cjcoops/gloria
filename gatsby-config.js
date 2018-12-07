@@ -3,6 +3,9 @@ module.exports = {
     title: 'gloria',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-styled-components`,
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
