@@ -8,6 +8,8 @@ const BgImage = styled(Img)`
   width: 100%;
   z-index: -1;
   height: 100vh;
+  transition: opacity 3s ease-in-out;
+  opacity: ${props => (props.isShown ? 1 : 0)};
 
   & > img {
     object-fit: cover !important;

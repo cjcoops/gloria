@@ -1,20 +1,45 @@
-import React from 'react'
+import React, { Component } from 'react'
 import BgImage from '../components/bg-image'
 import Layout from '../components/layout'
 import Enter from '../components/enter'
 
-const IndexPage = props => (
-  <Layout>
-    <BgImage fluid={props.data.landingImage.childImageSharp.fluid} />
-    <Enter />
-  </Layout>
-)
+class IndexPage extends Component {
+  state = {
+    onMainPage: true,
+  }
+
+  handleEnterClicked() {
+    this.setState({
+      onMainPage: false,
+    })
+  }
+
+  render() {
+    const enter = this.state.onMainPage && (
+      <Enter clicked={() => this.handleEnterClicked()} />
+    )
+
+    return (
+      <Layout>
+        <BgImage
+          fluid={this.props.data.landingPageImage.childImageSharp.fluid}
+          isShown={this.state.onMainPage}
+        />
+        <BgImage
+          fluid={this.props.data.mainPageImage.childImageSharp.fluid}
+          isShown={!this.state.onMainPage}
+        />
+        {enter}
+      </Layout>
+    )
+  }
+}
 
 export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    landingImage: file(relativePath: { eq: "000000010028.jpg" }) {
+    landingPageImage: file(relativePath: { eq: "000000010028.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
