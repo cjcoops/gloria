@@ -21,6 +21,8 @@ class IndexPage extends Component {
       <Enter clicked={() => this.handleEnterClicked()} />
     )
 
+    const video = !this.state.onMainPage && <Video />
+
     return (
       <>
         <Layout>
@@ -36,7 +38,7 @@ class IndexPage extends Component {
             {enter}
           </div>
 
-          <Video />
+          {video}
         </Layout>
       </>
     )

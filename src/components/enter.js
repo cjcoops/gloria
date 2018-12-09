@@ -10,7 +10,14 @@ const Enter = props => (
       textAlign: 'center',
     }}
   >
-    <p style={{ cursor: 'pointer', letterSpacing: '1rem' }}>ENTER</p>
+    <p
+      style={{
+        cursor: 'pointer',
+        letterSpacing: '1rem',
+      }}
+    >
+      ENTER
+    </p>
   </div>
 )
 
