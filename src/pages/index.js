@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import BgImage from '../components/bg-image'
 import Layout from '../components/layout'
 import Enter from '../components/enter'
+import Video from '../components/video'
+import { graphql } from 'gatsby'
 
 class IndexPage extends Component {
   state = {
@@ -20,17 +22,23 @@ class IndexPage extends Component {
     )
 
     return (
-      <Layout>
-        <BgImage
-          fluid={this.props.data.landingPageImage.childImageSharp.fluid}
-          isShown={this.state.onMainPage}
-        />
-        <BgImage
-          fluid={this.props.data.mainPageImage.childImageSharp.fluid}
-          isShown={!this.state.onMainPage}
-        />
-        {enter}
-      </Layout>
+      <>
+        <Layout>
+          <div style={{ height: '100vh' }}>
+            <BgImage
+              fluid={this.props.data.landingPageImage.childImageSharp.fluid}
+              isShown={this.state.onMainPage}
+            />
+            <BgImage
+              fluid={this.props.data.mainPageImage.childImageSharp.fluid}
+              isShown={!this.state.onMainPage}
+            />
+            {enter}
+          </div>
+
+          <Video />
+        </Layout>
+      </>
     )
   }
 }
