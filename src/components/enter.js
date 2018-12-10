@@ -14,6 +14,7 @@ const Enter = props => (
       style={{
         cursor: 'pointer',
         letterSpacing: '1rem',
+        marginRight: '-1rem',
       }}
     >
       ENTER

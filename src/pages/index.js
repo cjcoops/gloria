@@ -3,6 +3,7 @@ import BgImage from '../components/bg-image'
 import Layout from '../components/layout'
 import Enter from '../components/enter'
 import Video from '../components/video'
+import Socials from '../components/socials'
 import { graphql } from 'gatsby'
 
 class IndexPage extends Component {
@@ -22,6 +23,8 @@ class IndexPage extends Component {
     )
 
     const video = !this.state.onMainPage && <Video />
+
+    const socials = !this.state.onMainPage && <Socials />
 
     return (
       <>
