@@ -6,7 +6,7 @@ const BgImage = styled(Img)`
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -1;
+  z-index: 0;
   height: 100vh;
   transition: opacity 3s ease-in-out;
   opacity: ${props => (props.isShown ? 1 : 0)};

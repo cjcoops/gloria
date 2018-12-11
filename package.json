@@ -21,6 +21,7 @@
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.2.2",
+    "react-player": "^1.7.1",
     "styled-components": "^4.1.2"
   },
   "keywords": [

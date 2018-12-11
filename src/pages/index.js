@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import BgImage from '../components/bg-image'
 import Layout from '../components/layout'
 import Enter from '../components/enter'
-import Video from '../components/video'
-import Socials from '../components/socials'
+// import Socials from '../components/socials'
+import BgPlayer from '../components/bg-player'
 import { graphql } from 'gatsby'
 
 class IndexPage extends Component {
@@ -12,9 +12,9 @@ class IndexPage extends Component {
   }
 
   handleEnterClicked() {
-    this.setState({
-      onMainPage: false,
-    })
+    // this.setState({
+    //   onMainPage: false,
+    // })
   }
 
   render() {
@@ -22,9 +22,9 @@ class IndexPage extends Component {
       <Enter clicked={() => this.handleEnterClicked()} />
     )
 
-    const video = !this.state.onMainPage && <Video />
+    // const video = !this.state.onMainPage && <Video />
 
-    const socials = !this.state.onMainPage && <Socials />
+    // const socials = !this.state.onMainPage && <Socials />
 
     return (
       <>
@@ -38,10 +38,9 @@ class IndexPage extends Component {
               fluid={this.props.data.mainPageImage.childImageSharp.fluid}
               isShown={!this.state.onMainPage}
             />
+            <BgPlayer />
             {enter}
           </div>
-
-          {video}
         </Layout>
       </>
     )
@@ -52,7 +51,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    landingPageImage: file(relativePath: { eq: "000000010028.jpg" }) {
+    landingPageImage: file(relativePath: { eq: "Gloria-Logo-Window.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid

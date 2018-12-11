@@ -1,0 +1,20 @@
+.wrapperWrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.playerWrapper {
+  width: 100%; /*or whatever you choose*/
+  margin: auto;
+}
+
+.reactPlayer {
+  display: block;
+  width: 100%;
+  /* max-width: 5; actual image width */
+  height: auto; /* maintain aspect ratio*/
+  margin: auto; /*optional centering of image*/
+}
