@@ -3,8 +3,8 @@ import BgImage from '../components/bg-image'
 import Layout from '../components/layout'
 import Enter from '../components/enter'
 // import Socials from '../components/socials'
-import BgPlayer from '../components/bg-player'
-import { graphql } from 'gatsby'
+// import BgPlayer from '../components/bg-player'
+import { graphql, withPrefix } from 'gatsby'
 
 class IndexPage extends Component {
   state = {
@@ -30,6 +30,7 @@ class IndexPage extends Component {
       <>
         <Layout>
           <div style={{ height: '100vh' }}>
+            <img src={withPrefix('/out_teaser2.gif')} alt="Logo" />
             <BgImage
               fluid={this.props.data.landingPageImage.childImageSharp.fluid}
               isShown={this.state.onMainPage}
@@ -38,7 +39,7 @@ class IndexPage extends Component {
               fluid={this.props.data.mainPageImage.childImageSharp.fluid}
               isShown={!this.state.onMainPage}
             />
-            <BgPlayer />
+            {/* <BgPlayer /> */}
             {enter}
           </div>
         </Layout>
@@ -54,7 +55,7 @@ export const pageQuery = graphql`
     landingPageImage: file(relativePath: { eq: "Gloria-Logo-Window.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

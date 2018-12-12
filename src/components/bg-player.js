@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { withPrefix } from 'gatsby'
 import ReactPlayer from 'react-player'
 import classes from './bg-player.module.css'
 
@@ -10,7 +9,9 @@ class BgPlayer extends Component {
         <div className={classes.playerWrapper}>
           <ReactPlayer
             className={classes.reactPlayer}
-            url={withPrefix('/out_teaser2.mp4')}
+            url={
+              'https://s3-us-west-2.amazonaws.com/react-technics/out_teaser2.mp4'
+            }
             width="100%"
             height="100%"
             playing
