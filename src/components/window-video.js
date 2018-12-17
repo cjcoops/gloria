@@ -13,15 +13,14 @@ const WindowVideo = () => (
             }
           }
         }
+        gif: file(relativePath: { eq: "out_teaser2.gif" }) {
+          publicURL
+        }
       }
     `}
     render={data => (
       <>
-        <img
-          className={classes.gif}
-          src={withPrefix('/out_teaser2.gif')}
-          alt="Video"
-        />
+        <img className={classes.gif} src={data.gif.publicURL} alt="Video" />
         <img
           className={classes.window}
           src={data.landingPageImage.childImageSharp.fluid.src}
