@@ -17,5 +17,4 @@ const BgImage = styled(Img)`
     font-family: 'object-fit: cover !important; object-position: 0% 0% !important;';
   }
 `
-
 export default BgImage

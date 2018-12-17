@@ -1,0 +1,39 @@
+.releaseDate {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.lessSpacing {
+  letter-spacing: 0.4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .releaseDate {
+    font-size: 1.4rem;
+    letter-spacing: 0.4rem;
+    top: 20%;
+  }
+
+  .lessSpacing {
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+    .releaseDate {
+      font-size: 1.2rem;
+      letter-spacing: 0.3rem;
+      top: 20%;
+    }
+  
+    .lessSpacing {
+      letter-spacing: 0.1rem;
+    }
+  }

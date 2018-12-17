@@ -25,16 +25,16 @@ const Layout = ({ children }) => (
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
-          // link={[
-          //   {
-          //     rel: 'stylesheet',
-          //     href: 'https://fonts.googleapis.com/css?family=Anton',
-          //   },
-          // ]}
         >
           <html lang="en" />
         </Helmet>
-        <div>{children}</div>
+        <div
+        // style={{
+        //   height: '100vh',
+        // }}
+        >
+          {children}
+        </div>
       </>
     )}
   />
