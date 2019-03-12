@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby'
 // import { StaticQuery, graphql } from 'gatsby'
 import classes from './window-video.module.css'
 
@@ -27,11 +28,14 @@ class WindowVideo extends Component {
 
     return (
       <>
-        <img
-          className={classes.window}
-          src={this.props.gloriaWindow.childImageSharp.fluid.src}
-          alt="Logo"
-        />
+        <Link to="/main">
+          <img
+            className={classes.window}
+            src={this.props.gloriaWindow.childImageSharp.fluid.src}
+            alt="Logo"
+          />
+        </Link>
+
         <img
           className={classes.gif}
           src={this.props.gif.publicURL}

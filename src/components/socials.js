@@ -1,28 +1,28 @@
 import React from 'react'
-import { IconContext } from 'react-icons'
-import { IoLogoFacebook, IoLogoInstagram, IoMdMail } from 'react-icons/io'
+import BandCamp from '../assets/svg/Bandcamp-button-bc-circle-white.svg'
+import Insta from '../assets/svg/iconmonstr-instagram-11.svg'
+import ITunes from '../assets/svg/iTunes_Store_icon_wht.svg'
+import spotify from '../images/Spotify_Icon_RGB_White.png'
+
+import classes from './socials.module.css'
+
+console.log(classes)
 
 const Socials = () => (
-  <IconContext.Provider value={{ size: '20', style: { margin: '0 10' } }}>
-    <div
-      style={{
-        position: 'absolute',
-        bottom: '10%',
-        width: '100%',
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-      >
-        <IoLogoFacebook />
-        <IoLogoInstagram />
-        <IoMdMail />
-      </div>
+  <div className={classes.socialsContainer}>
+    <div className={classes.iconContainer}>
+      <BandCamp height="40" width="40" />
     </div>
-  </IconContext.Provider>
+    <div className={classes.iconContainer}>
+      <Insta height="40" />
+    </div>
+    <div className={classes.iconContainer}>
+      <ITunes height="40" />
+    </div>
+    <div className={classes.iconContainer}>
+      <img height="40" src={spotify} alt="Spotify" />
+    </div>
+  </div>
 )
 
 export default Socials
