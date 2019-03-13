@@ -1,16 +1,24 @@
 .socialsContainer {
-  margin: 30px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   width: 300px;
   padding: 5px;
   /* border: 1px red solid; */
-
+  padding-top: 30px;
 }
 
-.socialsContainer > .iconContainer {
+.iconContainer {
   flex: 1 1 auto;
   /* border: 1px red solid; */
   text-align: center;
   margin: 5px;
+  cursor: pointer;
+  filter: brightness(0.9);
+  transition: 0.5s all ease-in-out;
+}
+
+.iconContainer:hover {
+  filter: brightness(1);
+  transform: scale(1.1);
 }

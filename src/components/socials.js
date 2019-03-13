@@ -6,22 +6,40 @@ import spotify from '../images/Spotify_Icon_RGB_White.png'
 
 import classes from './socials.module.css'
 
-console.log(classes)
-
 const Socials = () => (
   <div className={classes.socialsContainer}>
-    <div className={classes.iconContainer}>
-      <BandCamp height="40" width="40" />
-    </div>
-    <div className={classes.iconContainer}>
-      <Insta height="40" />
-    </div>
-    <div className={classes.iconContainer}>
-      <ITunes height="40" />
-    </div>
-    <div className={classes.iconContainer}>
-      <img height="40" src={spotify} alt="Spotify" />
-    </div>
+    <a
+      className={classes.iconContainer}
+      href="https://thespectacularempire.bandcamp.com/album/out"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <BandCamp height="30" width="30" />
+    </a>
+    <a
+      className={classes.iconContainer}
+      href="https://www.instagram.com/glori____a/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Insta height="30" />
+    </a>
+    <a
+      className={classes.iconContainer}
+      href="https://itunes.apple.com/gb/album/out/1449715164?i=1449715467&app=music"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <ITunes height="30" />
+    </a>
+    <a
+      className={classes.iconContainer}
+      href="https://open.spotify.com/track/57Tu62HWKSOImIRgTNulON"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img height="30" src={spotify} alt="Spotify" />
+    </a>
   </div>
 )
 

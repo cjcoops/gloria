@@ -1,1 +1,1 @@
-`youtube: https://youtu.be/9hpO5gsm_5g`
+`youtube: https://youtu.be/9hpO5gsm_5g?autoplay=1`
