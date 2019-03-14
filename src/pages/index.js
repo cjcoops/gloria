@@ -1,14 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout'
 import WindowVideo from '../components/window-video'
+// import ReleaseDate from '../components/release-date'
+import Enter from '../components/enter'
 
 const IndexPage = ({ data }) => (
   <Layout>
     <WindowVideo gif={data.gif} gloriaWindow={data.gloriaWindow} />
-    {/* <ReleaseDate>
-          <span className="less-spacing">'</span>Ou
-          <span className="less-spacing">t</span>' 26 January 2019
-        </ReleaseDate> */}
+    <Enter />
   </Layout>
 )
 

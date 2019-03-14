@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import favicon from '../images/favicon.ico'
+import ogImage from '../images/000000010028.jpg'
 
 import './anton.css'
 import './layout.css'
@@ -27,7 +28,7 @@ const Layout = ({ children }) => (
               name: 'description',
               content: 'Singer/songwriter based in London.',
             },
-            { name: 'keywords', content: 'sample, something' },
+            { property: 'og:image', content: `${ogImage}` },
           ]}
           link={[
             { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
