@@ -26,7 +26,7 @@ const Layout = ({ children }) => (
           meta={[
             {
               name: 'description',
-              content: 'Singer/songwriter based in London.',
+              content: 'Alternative RNB Music Artist',
             },
             { property: 'og:image', content: `${ogImage}` },
           ]}

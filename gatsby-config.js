@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'gloria',
+    title: 'GLORIA',
   },
   pathPrefix: `/static`,
   plugins: [
