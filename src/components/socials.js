@@ -34,7 +34,7 @@ const Socials = () => (
     </a>
     <a
       className={classes.iconContainer}
-      href="https://www.instagram.com/glori____a/"
+      href="https://www.instagram.com/glorias.land/"
       target="_blank"
       rel="noopener noreferrer"
     >

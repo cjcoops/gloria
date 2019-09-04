@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'GLORIA',
+    siteUrl: `https://glorias.land`,
   },
   pathPrefix: `/static`,
   plugins: [

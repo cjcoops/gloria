@@ -15,6 +15,7 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            siteUrl
           }
         }
       }
@@ -28,7 +29,10 @@ const Layout = ({ children }) => (
               name: 'description',
               content: 'Alternative RNB Music Artist',
             },
-            { property: 'og:image', content: `${ogImage}` },
+            {
+              property: 'og:image',
+              content: `${data.site.siteMetadata.siteUrl}${ogImage}`,
+            },
           ]}
           link={[
             { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
