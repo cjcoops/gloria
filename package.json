@@ -16,7 +16,7 @@
     "gatsby-remark-embed-video": "^1.7.1",
     "gatsby-remark-responsive-iframe": "^2.4.12",
     "gatsby-source-filesystem": "^2.3.27",
-    "gatsby-transformer-remark": "^2.8.31",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.1.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
